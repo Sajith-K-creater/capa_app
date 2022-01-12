@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include capa_app *.css
+recursive-include capa_app *.csv
+recursive-include capa_app *.html
+recursive-include capa_app *.ico
+recursive-include capa_app *.js
+recursive-include capa_app *.json
+recursive-include capa_app *.md
+recursive-include capa_app *.png
+recursive-include capa_app *.py
+recursive-include capa_app *.svg
+recursive-include capa_app *.txt
+recursive-exclude capa_app *.pyc
