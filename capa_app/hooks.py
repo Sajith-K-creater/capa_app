@@ -9,6 +9,22 @@ app_color = "grey"
 app_email = "info@ideenkreisetech.com"
 app_license = "MIT"
 
+app_logo_url = "/assets/capa_app/images/mtr-logo.png"
+brand_html = '<img src="/assets/capa_app/images/mtr-logo.png" style="height:30px;width:30px">&nbsp&nbsp<b>MTR CAPA</b>'
+website_context = {
+    "favicon": "/assets/capa_app/images/mtr-logo.png",
+    "splash_image": "/assets/capa_app/images/mtr-logo.png"
+}
+
+
+permission_query_conditions = {
+	"Complaint": "capa_app.capa_app.doctype.complaint.complaint.complaint_has_permission",
+}
+
+# has_permission = {
+# 	"Complaint": "capa_app.capa_app.doctype.complaint.complaint.has_permission",	
+# }
+
 # Includes in <head>
 # ------------------
 

@@ -1,0 +1,341 @@
+{
+ "add_total_row": 0,
+ "columns": [],
+ "creation": "2022-01-24 15:49:31.854825",
+ "disable_prepared_report": 0,
+ "disabled": 0,
+ "docstatus": 0,
+ "doctype": "Report",
+ "filters": [],
+ "idx": 0,
+ "is_standard": "Yes",
+ "modified": "2022-01-24 15:49:31.854825",
+ "modified_by": "Administrator",
+ "module": "Capa App",
+ "name": "Complaint Status Report",
+ "owner": "Administrator",
+ "prepared_report": 0,
+ "ref_doctype": "Complaint",
+ "report_name": "Complaint Status Report",
+ "report_type": "Script Report",
+ "roles": [
+  {
+   "role": "Feedback"
+  },
+  {
+   "role": "Breakfast Mix Plant Executive"
+  },
+  {
+   "role": "Health Drink Mix Division Representative"
+  },
+  {
+   "role": "Gulab Jamun Mix Plant Executive"
+  },
+  {
+   "role": "Masala Plant Executive"
+  },
+  {
+   "role": "Rice Meal Powders Plant Executive"
+  },
+  {
+   "role": "Beverages Plant Executive"
+  },
+  {
+   "role": "Vermicelli & Macaroni Plant Executive"
+  },
+  {
+   "role": "RTE Curry Plant Executive"
+  },
+  {
+   "role": "RTE Sweets Plant Executive"
+  },
+  {
+   "role": "Laban Plant Executive"
+  },
+  {
+   "role": "EHS Plant Executive"
+  },
+  {
+   "role": "FSTL Plant Executive"
+  },
+  {
+   "role": "HR Plant Executive"
+  },
+  {
+   "role": "Packaging Plant Executive"
+  },
+  {
+   "role": "Admin & Security Plant Executive"
+  },
+  {
+   "role": "QC 1 Plant Executive"
+  },
+  {
+   "role": "QC 2 Plant Executive"
+  },
+  {
+   "role": "QC Analytical Plant Executive"
+  },
+  {
+   "role": "PD - Masala Plant Executive"
+  },
+  {
+   "role": "PD - Rice Meal Powder Plant Executive"
+  },
+  {
+   "role": "PD - RTE Curry Plant Executive"
+  },
+  {
+   "role": "PD - Pickle Plant Executive"
+  },
+  {
+   "role": "PD - Innovation & Technology Plant Executive"
+  },
+  {
+   "role": "PD - Breakfast Mixes Plant Executive"
+  },
+  {
+   "role": "PD - Sweet Mixes  Plant Executive"
+  },
+  {
+   "role": "PD - Laban Plant Executive"
+  },
+  {
+   "role": "PD - Health Drink Mix Plant Executive"
+  },
+  {
+   "role": "PD - Beverage Plant Executive"
+  },
+  {
+   "role": "PD - RTE Sweet Plant Executive"
+  },
+  {
+   "role": "PKD Development  Plant Executive"
+  },
+  {
+   "role": "Maintenance  Plant Executive"
+  },
+  {
+   "role": "IMD Plant Executive"
+  },
+  {
+   "role": "Project Plant Executive"
+  },
+  {
+   "role": "Supplier Quality & Purchase Plant Executive"
+  },
+  {
+   "role": "Out Sourcing Plant Executive"
+  },
+  {
+   "role": "IT Plant Executive"
+  },
+  {
+   "role": "Regulatory Plant Executive"
+  },
+  {
+   "role": "Breakfast Mix Division Representative"
+  },
+  {
+   "role": "Health Drink Mix Plant Executive"
+  },
+  {
+   "role": "Gulab Jamun Mix Division Representative"
+  },
+  {
+   "role": "Masala Division Representative"
+  },
+  {
+   "role": "Rice Meal Powders Division Representative"
+  },
+  {
+   "role": "Beverages Division Representative"
+  },
+  {
+   "role": "Vermicelli & Macaroni Division Representative"
+  },
+  {
+   "role": "RTE Curry Division Representative"
+  },
+  {
+   "role": "RTE Sweets Division Representative"
+  },
+  {
+   "role": "Laban Division Representative"
+  },
+  {
+   "role": "EHS Division Representative"
+  },
+  {
+   "role": "FSTL Division Representative"
+  },
+  {
+   "role": "HR Division Representative"
+  },
+  {
+   "role": "Packaging Division Representative"
+  },
+  {
+   "role": "Admin & Security Division Representative"
+  },
+  {
+   "role": "QC 1 Division Representative"
+  },
+  {
+   "role": "QC 2 Division Representative"
+  },
+  {
+   "role": "QC Analytical Division Representative"
+  },
+  {
+   "role": "PD - Masala Division Representative"
+  },
+  {
+   "role": "PD - Rice Meal Powder Division Representative"
+  },
+  {
+   "role": "PD - RTE Curry Division Representative"
+  },
+  {
+   "role": "PD - Pickle Division Representative"
+  },
+  {
+   "role": "PD - Innovation & Technology Division Representative"
+  },
+  {
+   "role": "PD - Breakfast Mixes Division Representative"
+  },
+  {
+   "role": "PD - Sweet Mixes Division Representative"
+  },
+  {
+   "role": "PD - Laban Division Representative"
+  },
+  {
+   "role": "PD - Health Drink Mix Division Representative"
+  },
+  {
+   "role": "PD - Beverage Division Representative"
+  },
+  {
+   "role": "PD - RTE Sweet Division Representative"
+  },
+  {
+   "role": "PKD Development  Division Representative"
+  },
+  {
+   "role": "Maintenance  Division Representative"
+  },
+  {
+   "role": "IMD Division Representative"
+  },
+  {
+   "role": "Project Division Representative"
+  },
+  {
+   "role": "Supplier Quality & Purchase Division Representative"
+  },
+  {
+   "role": "Out Sourcing Division Representative"
+  },
+  {
+   "role": "IT Division Representative"
+  },
+  {
+   "role": "Regulatory Division Representative"
+  },
+  {
+   "role": "Manufacturing Division Manager & Head"
+  },
+  {
+   "role": "Manufacturing HOD/GM"
+  },
+  {
+   "role": "EHS Division Manager & Head"
+  },
+  {
+   "role": "EHS HOD/GM"
+  },
+  {
+   "role": "FSTL Division Manager & Head"
+  },
+  {
+   "role": "FSTL HOD/GM"
+  },
+  {
+   "role": "HR Division Manager & Head"
+  },
+  {
+   "role": "HR HOD/GM"
+  },
+  {
+   "role": "Packaging Division Manager & Head"
+  },
+  {
+   "role": "Packaging HOD/GM"
+  },
+  {
+   "role": "IMD Division Manager & Head"
+  },
+  {
+   "role": "IMD HOD/GM"
+  },
+  {
+   "role": "Admin & Security Division Manager & Head"
+  },
+  {
+   "role": "Admin & Security HOD/GM"
+  },
+  {
+   "role": "Quality Division Manager & Head"
+  },
+  {
+   "role": "Quality HOD/GM"
+  },
+  {
+   "role": "Product Development Division Manager & Head"
+  },
+  {
+   "role": "Maintenance & Project Division Manager & Head"
+  },
+  {
+   "role": "Maintenance & Project HOD/GM"
+  },
+  {
+   "role": "Supplier Quality & Purchase Division Manager & Head"
+  },
+  {
+   "role": "Supplier Quality & Purchase HOD/GM"
+  },
+  {
+   "role": "Out Sourcing Division Manager & Head"
+  },
+  {
+   "role": "Out Sourcing HOD/GM"
+  },
+  {
+   "role": "IT Division Manager & Head"
+  },
+  {
+   "role": "IT HOD/GM"
+  },
+  {
+   "role": "Regulatory Division Manager & Head"
+  },
+  {
+   "role": "Regulatory HOD/GM"
+  },
+  {
+   "role": "Initiator"
+  },
+  {
+   "role": "Investigator"
+  },
+  {
+   "role": "Verifier"
+  },
+  {
+   "role": "Approver"
+  }
+ ]
+}

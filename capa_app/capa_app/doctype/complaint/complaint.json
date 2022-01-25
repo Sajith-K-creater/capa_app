@@ -1,0 +1,358 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:Complaint-{#####}",
+ "creation": "2022-01-12 15:57:26.474089",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "status",
+  "non_conformity_section_or_initiating_authority_section",
+  "complaint_sub_category",
+  "product_name",
+  "division",
+  "column_break_5",
+  "product_sku",
+  "product_batch",
+  "mfg_date",
+  "column_break_8",
+  "complaint",
+  "complaint_description",
+  "investigation_correction_section_or_investigating_plant_section",
+  "root_cause_tool",
+  "root_cause_analysis",
+  "corrective_action_section_section",
+  "corrective_action1",
+  "corrective_action2",
+  "corrective_action3",
+  "corrective_action4",
+  "corrective_action5",
+  "column_break_17",
+  "due_date1",
+  "due_date2",
+  "due_date3",
+  "due_date4",
+  "due_date5",
+  "column_break_19",
+  "responsibility__1",
+  "responsibility__2",
+  "responsibility__3",
+  "responsibility__4",
+  "responsibility__5",
+  "attachments_section",
+  "5_why_or_fishbone_sheet",
+  "column_break_35",
+  "corrective_action_report",
+  "column_break_37",
+  "attachments",
+  "comments_section",
+  "yes",
+  "no",
+  "s1",
+  "s2",
+  "s3",
+  "s4",
+  "s5",
+  "status1",
+  "status3"
+ ],
+ "fields": [
+  {
+   "fieldname": "non_conformity_section_or_initiating_authority_section",
+   "fieldtype": "Section Break",
+   "label": "Non Conformity Section / Initiating Authority "
+  },
+  {
+   "fieldname": "complaint_sub_category",
+   "fieldtype": "Link",
+   "label": "Complaint Sub Category",
+   "options": "Complaint Sub Category",
+   "width": "12"
+  },
+  {
+   "fieldname": "product_name",
+   "fieldtype": "Link",
+   "label": "Product Name ",
+   "options": "Product"
+  },
+  {
+   "fieldname": "division",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Division ",
+   "options": "Division"
+  },
+  {
+   "fieldname": "product_sku",
+   "fieldtype": "Data",
+   "label": "Product SKU "
+  },
+  {
+   "fieldname": "complaint",
+   "fieldtype": "Data",
+   "label": "Complaint ",
+   "width": "100"
+  },
+  {
+   "fieldname": "product_batch",
+   "fieldtype": "Data",
+   "label": "Product Batch "
+  },
+  {
+   "fieldname": "mfg_date",
+   "fieldtype": "Date",
+   "label": "MFG Date "
+  },
+  {
+   "fieldname": "investigation_correction_section_or_investigating_plant_section",
+   "fieldtype": "Section Break",
+   "label": "Investigation_Correction Section / Investigating Plant "
+  },
+  {
+   "columns": 10,
+   "fieldname": "root_cause_tool",
+   "fieldtype": "Link",
+   "label": "Root Cause Tool ",
+   "options": "Root Cause Tool",
+   "width": "100"
+  },
+  {
+   "fieldname": "root_cause_analysis",
+   "fieldtype": "Long Text",
+   "label": "Root Cause Analysis"
+  },
+  {
+   "fieldname": "corrective_action_section_section",
+   "fieldtype": "Section Break",
+   "label": "Corrective Action Section"
+  },
+  {
+   "fieldname": "corrective_action1",
+   "fieldtype": "Data",
+   "label": "Corrective Action1"
+  },
+  {
+   "fieldname": "corrective_action2",
+   "fieldtype": "Data",
+   "label": "Corrective Action2"
+  },
+  {
+   "fieldname": "corrective_action3",
+   "fieldtype": "Data",
+   "label": "Corrective Action3"
+  },
+  {
+   "fieldname": "corrective_action4",
+   "fieldtype": "Data",
+   "label": "Corrective Action4"
+  },
+  {
+   "fieldname": "corrective_action5",
+   "fieldtype": "Data",
+   "label": "Corrective Action5"
+  },
+  {
+   "fieldname": "due_date1",
+   "fieldtype": "Date",
+   "label": "Due Date1"
+  },
+  {
+   "fieldname": "due_date2",
+   "fieldtype": "Date",
+   "label": "Due Date2"
+  },
+  {
+   "fieldname": "due_date3",
+   "fieldtype": "Date",
+   "label": "Due Date3"
+  },
+  {
+   "fieldname": "due_date4",
+   "fieldtype": "Date",
+   "label": "Due Date4"
+  },
+  {
+   "fieldname": "due_date5",
+   "fieldtype": "Date",
+   "label": "Due Date5"
+  },
+  {
+   "fieldname": "attachments_section",
+   "fieldtype": "Section Break",
+   "label": "Attachments "
+  },
+  {
+   "fieldname": "5_why_or_fishbone_sheet",
+   "fieldtype": "Attach",
+   "label": "5 Why or Fishbone sheet "
+  },
+  {
+   "fieldname": "corrective_action_report",
+   "fieldtype": "Attach",
+   "label": "Corrective Action Report"
+  },
+  {
+   "fieldname": "attachments",
+   "fieldtype": "Attach",
+   "label": "Attachments"
+  },
+  {
+   "fieldname": "comments_section",
+   "fieldtype": "Section Break",
+   "label": "Comments/Repetitive"
+  },
+  {
+   "fieldname": "complaint_description",
+   "fieldtype": "Text Editor",
+   "label": "Complaint Description"
+  },
+  {
+   "default": "0",
+   "fieldname": "yes",
+   "fieldtype": "Check",
+   "label": "Yes "
+  },
+  {
+   "default": "0",
+   "fieldname": "no",
+   "fieldtype": "Check",
+   "label": "No"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Section Break",
+   "label": "Complaint Section"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_17",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_19",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_35",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "column_break_37",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "status",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "in_filter": 1,
+   "in_global_search": 1,
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "status"
+  },
+  {
+   "fieldname": "responsibility__1",
+   "fieldtype": "Link",
+   "label": "Responsibility 1",
+   "options": "Role"
+  },
+  {
+   "fieldname": "responsibility__2",
+   "fieldtype": "Link",
+   "label": "Responsibility 2",
+   "options": "Role"
+  },
+  {
+   "fieldname": "responsibility__3",
+   "fieldtype": "Link",
+   "label": "Responsibility 3",
+   "options": "Role"
+  },
+  {
+   "fieldname": "responsibility__4",
+   "fieldtype": "Link",
+   "label": "Responsibility 4",
+   "options": "Role"
+  },
+  {
+   "fieldname": "responsibility__5",
+   "fieldtype": "Link",
+   "label": "Responsibility 5",
+   "options": "Role"
+  },
+  {
+   "fieldname": "s1",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "s1"
+  },
+  {
+   "fieldname": "s2",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "s2"
+  },
+  {
+   "fieldname": "s3",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "s3"
+  },
+  {
+   "fieldname": "s4",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "s4"
+  },
+  {
+   "fieldname": "s5",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "s5"
+  },
+  {
+   "default": "0",
+   "fieldname": "status1",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "status1"
+  },
+  {
+   "fieldname": "status3",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "status3"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2022-01-24 16:59:00.097156",
+ "modified_by": "Administrator",
+ "module": "Capa App",
+ "name": "Complaint",
+ "name_case": "UPPER CASE",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1,
+ "track_seen": 1
+}
