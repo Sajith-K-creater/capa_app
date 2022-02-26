@@ -2,6 +2,8 @@
 # For license information, please see license.txt
 
 import frappe
+from datetime import date
+from datetime import timedelta
 from frappe.model.document import Document
 
 class Complaint(Document):
@@ -38,7 +40,7 @@ def complaint_has_permission(user):
 	condition="(1=0"
 	for role_name in role_array:
 		condition+=' or division like '+"'%"+role_name+"%'"
-		if role_name=='Approver' or role_name=='Administrator':
+		if role_name=='Approver' or frappe.session.user=='Administrator':
 			condition+='or 1=1'
 		if role_name=='Feedback':
 			condition+='or owner = '+"'"+frappe.session.user+"'"
@@ -48,4 +50,24 @@ def complaint_has_permission(user):
 
 # def has_permission(doc, user):
 # 	return False
+# @frappe.whitelist()
+# def notification_fun (doc_name,doc_status):
+# 	doc_check=frappe.db.sql('select * from `tabComplaint Timeline` where complaint = %(name)s  and state=%(status)s' ,values={'name':doc_name,'status':doc_status}, as_dict=1)
+# 	if doc_check :
+# 		return False
+# 	else:
+# 		doc_select=frappe.db.sql('select `duration` from `tabComplaint SLA` where state = %(status)s' ,values={'status':doc_status}, as_dict=1)
+# 		duration=doc_select[0]
+# 		print (duration.duration)
+# 		doc1= frappe.new_doc('Complaint Timeline')
+# 		doc1.complaint = doc_name
+# 		doc1.state  = doc_status
+# 		doc1.insert_date = date.today()
+# 		doc1.update_date = date.today() + timedelta(days=int(duration.duration))
+# 		doc1.status  = '1'
+# 		doc1.save()
+# 		return True
+		
+		
+# 	return doc_name
 

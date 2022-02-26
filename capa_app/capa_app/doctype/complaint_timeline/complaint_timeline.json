@@ -17,6 +17,7 @@
   {
    "fieldname": "complaint",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Complaint",
    "options": "Complaint",
    "unique": 1
@@ -44,7 +45,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-01-25 10:08:29.573330",
+ "modified": "2022-02-25 12:17:06.613707",
  "modified_by": "Administrator",
  "module": "Capa App",
  "name": "Complaint Timeline",

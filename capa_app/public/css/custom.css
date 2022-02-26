@@ -1,0 +1,34 @@
+/*!
+ * Bootstrap v3.3.1 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
+ * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
+ */
+
+/*! normalize.css v3.0.2 | MIT License | git.io/normalize */
+/* 
+
+.main-section {
+    background-color: #ff5817 !important;
+}
+
+
+#page-Workspaces {
+    background-color: #f9d29d;
+background-image: linear-gradient(315deg, #f9d29d 0%, #ffd8cb 74%)!important;
+ 
+}*/
+
+
+.navbar {
+    background-color: #ffffff;
+background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%)!important;
+   
+}
+
+.page-container {
+    background-color: #ffffff;
+background-image: linear-gradient(315deg, #ffffff 0%, #d7e1ec 74%);
+} 
+.layout-side-section {
+    background-color: #ffffff;
+}

@@ -1,7 +1,7 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "format:Complaint-{#####}",
+ "autoname": "format:{source}-{#####}",
  "creation": "2022-01-12 15:57:26.474089",
  "doctype": "DocType",
  "editable_grid": 1,
@@ -9,19 +9,50 @@
  "field_order": [
   "status",
   "non_conformity_section_or_initiating_authority_section",
+  "source",
   "complaint_sub_category",
   "product_name",
   "division",
   "column_break_5",
   "product_sku",
   "product_batch",
+  "product_code",
   "mfg_date",
   "column_break_8",
   "complaint",
+  "id_date",
   "complaint_description",
+  "internal_and_external_audit_section_section",
+  "audit",
+  "nc_description",
+  "nc_clause_no",
+  "nc_attach",
+  "nc_number",
+  "nc_category",
+  "auditee",
+  "auditor",
+  "date_of_audit",
   "investigation_correction_section_or_investigating_plant_section",
   "root_cause_tool",
   "root_cause_analysis",
+  "correction_section_section",
+  "correction_1",
+  "correction_2",
+  "correction_3",
+  "correction_4",
+  "correction_5",
+  "column_break_34",
+  "correction_due_date_1",
+  "correction_due_date_2",
+  "correction_due_date_3",
+  "correction_due_date_4",
+  "correction_due_date_5",
+  "column_break_40",
+  "correction_responsibility_1",
+  "correction_responsibility_2",
+  "correction_responsibility_3",
+  "correction_responsibility_4",
+  "correction_responsibility_5",
   "corrective_action_section_section",
   "corrective_action1",
   "corrective_action2",
@@ -54,6 +85,11 @@
   "s3",
   "s4",
   "s5",
+  "s6",
+  "s7",
+  "s8",
+  "s9",
+  "s10",
   "status1",
   "status3"
  ],
@@ -61,7 +97,7 @@
   {
    "fieldname": "non_conformity_section_or_initiating_authority_section",
    "fieldtype": "Section Break",
-   "label": "Non Conformity Section / Initiating Authority "
+   "label": "Non Conformity Section "
   },
   {
    "fieldname": "complaint_sub_category",
@@ -82,7 +118,8 @@
    "in_list_view": 1,
    "in_standard_filter": 1,
    "label": "Division ",
-   "options": "Division"
+   "options": "Division",
+   "reqd": 1
   },
   {
    "fieldname": "product_sku",
@@ -92,7 +129,7 @@
   {
    "fieldname": "complaint",
    "fieldtype": "Data",
-   "label": "Complaint ",
+   "label": "Complaint/Internal Deviation ",
    "width": "100"
   },
   {
@@ -108,7 +145,7 @@
   {
    "fieldname": "investigation_correction_section_or_investigating_plant_section",
    "fieldtype": "Section Break",
-   "label": "Investigation_Correction Section / Investigating Plant "
+   "label": "Investigation Section"
   },
   {
    "columns": 10,
@@ -131,52 +168,52 @@
   {
    "fieldname": "corrective_action1",
    "fieldtype": "Data",
-   "label": "Corrective Action1"
+   "label": "Corrective Action 1"
   },
   {
    "fieldname": "corrective_action2",
    "fieldtype": "Data",
-   "label": "Corrective Action2"
+   "label": "Corrective Action 2"
   },
   {
    "fieldname": "corrective_action3",
    "fieldtype": "Data",
-   "label": "Corrective Action3"
+   "label": "Corrective Action 3"
   },
   {
    "fieldname": "corrective_action4",
    "fieldtype": "Data",
-   "label": "Corrective Action4"
+   "label": "Corrective Action 4"
   },
   {
    "fieldname": "corrective_action5",
    "fieldtype": "Data",
-   "label": "Corrective Action5"
+   "label": "Corrective Action 5"
   },
   {
    "fieldname": "due_date1",
    "fieldtype": "Date",
-   "label": "Due Date1"
+   "label": "Due Date 1"
   },
   {
    "fieldname": "due_date2",
    "fieldtype": "Date",
-   "label": "Due Date2"
+   "label": "Due Date 2"
   },
   {
    "fieldname": "due_date3",
    "fieldtype": "Date",
-   "label": "Due Date3"
+   "label": "Due Date 3"
   },
   {
    "fieldname": "due_date4",
    "fieldtype": "Date",
-   "label": "Due Date4"
+   "label": "Due Date 4"
   },
   {
    "fieldname": "due_date5",
    "fieldtype": "Date",
-   "label": "Due Date5"
+   "label": "Due Date 5"
   },
   {
    "fieldname": "attachments_section",
@@ -206,7 +243,7 @@
   {
    "fieldname": "complaint_description",
    "fieldtype": "Text Editor",
-   "label": "Complaint Description"
+   "label": "Complaint/Internal Deviation Description"
   },
   {
    "default": "0",
@@ -223,7 +260,7 @@
   {
    "fieldname": "column_break_8",
    "fieldtype": "Section Break",
-   "label": "Complaint Section"
+   "label": "Complaint/Internal Deviation Section"
   },
   {
    "fieldname": "column_break_5",
@@ -327,11 +364,204 @@
    "fieldtype": "Data",
    "hidden": 1,
    "label": "status3"
+  },
+  {
+   "fieldname": "source",
+   "fieldtype": "Link",
+   "in_standard_filter": 1,
+   "label": "Source of NC",
+   "options": "source",
+   "reqd": 1
+  },
+  {
+   "fieldname": "product_code",
+   "fieldtype": "Data",
+   "label": "Product Code"
+  },
+  {
+   "fieldname": "internal_and_external_audit_section_section",
+   "fieldtype": "Section Break",
+   "label": "Internal and External Audit Section"
+  },
+  {
+   "fieldname": "audit",
+   "fieldtype": "Link",
+   "label": "Audit Type",
+   "options": "Audit Types"
+  },
+  {
+   "fieldname": "nc_description",
+   "fieldtype": "Long Text",
+   "label": "NC Description"
+  },
+  {
+   "fieldname": "nc_clause_no",
+   "fieldtype": "Data",
+   "label": "NC Clause No"
+  },
+  {
+   "fieldname": "nc_attach",
+   "fieldtype": "Attach",
+   "label": "NC evidence attachment, if any"
+  },
+  {
+   "fieldname": "nc_number",
+   "fieldtype": "Data",
+   "label": "NC number"
+  },
+  {
+   "fieldname": "nc_category",
+   "fieldtype": "Link",
+   "label": "NC Category",
+   "options": "NC Category"
+  },
+  {
+   "fieldname": "auditee",
+   "fieldtype": "Data",
+   "label": "Auditee"
+  },
+  {
+   "fieldname": "auditor",
+   "fieldtype": "Data",
+   "label": "Auditor"
+  },
+  {
+   "fieldname": "date_of_audit",
+   "fieldtype": "Date",
+   "label": "Date of Audit"
+  },
+  {
+   "fieldname": "correction_section_section",
+   "fieldtype": "Section Break",
+   "label": "Correction Section"
+  },
+  {
+   "fieldname": "correction_1",
+   "fieldtype": "Data",
+   "label": "correction 1"
+  },
+  {
+   "fieldname": "correction_2",
+   "fieldtype": "Data",
+   "label": "correction 2"
+  },
+  {
+   "fieldname": "correction_3",
+   "fieldtype": "Data",
+   "label": "correction 3"
+  },
+  {
+   "fieldname": "correction_4",
+   "fieldtype": "Data",
+   "label": "correction 4"
+  },
+  {
+   "fieldname": "correction_5",
+   "fieldtype": "Data",
+   "label": "correction 5"
+  },
+  {
+   "fieldname": "column_break_34",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "correction_due_date_1",
+   "fieldtype": "Date",
+   "label": "Correction Due date 1"
+  },
+  {
+   "fieldname": "correction_due_date_2",
+   "fieldtype": "Date",
+   "label": "Correction Due date 2"
+  },
+  {
+   "fieldname": "correction_due_date_3",
+   "fieldtype": "Date",
+   "label": "Correction Due date 3"
+  },
+  {
+   "fieldname": "correction_due_date_4",
+   "fieldtype": "Date",
+   "label": "Correction Due date 4"
+  },
+  {
+   "fieldname": "correction_due_date_5",
+   "fieldtype": "Date",
+   "label": "Correction Due date 5"
+  },
+  {
+   "fieldname": "column_break_40",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "correction_responsibility_1",
+   "fieldtype": "Link",
+   "label": "Correction Responsibility 1",
+   "options": "Role"
+  },
+  {
+   "fieldname": "correction_responsibility_2",
+   "fieldtype": "Link",
+   "label": "Correction Responsibility 2",
+   "options": "Role"
+  },
+  {
+   "fieldname": "correction_responsibility_3",
+   "fieldtype": "Link",
+   "label": "Correction Responsibility 3",
+   "options": "Role"
+  },
+  {
+   "fieldname": "correction_responsibility_4",
+   "fieldtype": "Link",
+   "label": "Correction Responsibility 4",
+   "options": "Role"
+  },
+  {
+   "fieldname": "correction_responsibility_5",
+   "fieldtype": "Link",
+   "label": "Correction Responsibility 5",
+   "options": "Role"
+  },
+  {
+   "fieldname": "id_date",
+   "fieldtype": "Date",
+   "label": "Internal Deviation Date"
+  },
+  {
+   "fieldname": "s6",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "s6"
+  },
+  {
+   "fieldname": "s7",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "s7"
+  },
+  {
+   "fieldname": "s8",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "s8"
+  },
+  {
+   "fieldname": "s9",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "s9"
+  },
+  {
+   "fieldname": "s10",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "s10"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2022-01-24 16:59:00.097156",
+ "modified": "2022-02-24 12:20:44.398679",
  "modified_by": "Administrator",
  "module": "Capa App",
  "name": "Complaint",
